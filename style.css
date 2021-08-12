@@ -1,0 +1,25 @@
+body {
+    background: green;
+}
+
+.carta {
+    background: white;
+	width: 320px;
+	height: 450px;
+	margin: auto;
+    
+}
+
+h1 {
+    font-size: 10em;
+    text-align: center;
+    padding-top: 40%;
+    margin: 0px;
+}
+
+h2 {
+    font-size: 5em;
+    margin: 0;
+    padding-top: 50px;
+    padding-left: 10px;
+}
