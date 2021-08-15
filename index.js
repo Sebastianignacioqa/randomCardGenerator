@@ -12,7 +12,7 @@ let palo = document.createElement("H2");
 palo.innerHTML = misPalos[randomPalo];
 
 let palo2 = document.createElement("H3");
-palo2.innerHTML = misPalos[randomPalo]
+palo2.innerHTML = misPalos[randomPalo];
     
 
 
@@ -22,41 +22,50 @@ if (randomNumber <=10) {
 numero.innerHTML = randomNumber;
 }
 else if (randomNumber>10) {
-numero.innerHTML = letras[randomLetra]
+numero.innerHTML = letras[randomLetra];
 }
 
     
 if (randomPalo === 0 ) {
-    palo.style.color = "red"
-    palo2.style.color = "red"
+    palo.style.color = "red";
+    palo2.style.color = "red";
     
 }
 else if (randomPalo === 1) {
-    palo.style.color = "red"
-    palo2.style.color = "red"
+    palo.style.color = "red";
+    palo2.style.color = "red";
 }
 
 let input1 = document.createElement("INPUT");
-input1.placeholder = "Choose width"
+input1.placeholder = "Choose width";
 let input2 = document.createElement("INPUT");
-input2.placeholder = "Choose height"
+input2.placeholder = "Choose height";
+
+
 
 let boton = document.createElement("BUTTON");
-boton.innerHTML = "Click me!"
+boton.innerHTML = "Click me!";
 
 let carta = document.querySelector(".carta");
     carta.appendChild(palo2);
     carta.appendChild(numero);
     carta.appendChild(palo);
-    carta.appendChild(boton)
-    carta.appendChild(input1)
-    carta.appendChild(input2)
+    carta.appendChild(boton);
+    carta.appendChild(input1);
+    carta.appendChild(input2);
+
 
 
 boton.addEventListener("click", ()=> {
     location.reload();
 
 });
+
+input1.addEventListener("onkeypress", ()=> {
+    carta.style.width = input2.value;
+
+});
+
 
 setInterval("location.reload()",10000);
 
