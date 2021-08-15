@@ -25,10 +25,6 @@ else if (randomNumber>10) {
 numero.innerHTML = letras[randomLetra]
 }
 
-let carta = document.querySelector(".carta");
-    carta.appendChild(palo2);
-    carta.appendChild(numero);
-    carta.appendChild(palo);
     
 if (randomPalo === 0 ) {
     palo.style.color = "red"
@@ -40,7 +36,30 @@ else if (randomPalo === 1) {
     palo2.style.color = "red"
 }
 
-numero.innerHTML
+let input1 = document.createElement("INPUT");
+input1.placeholder = "Choose width"
+let input2 = document.createElement("INPUT");
+input2.placeholder = "Choose height"
 
+let boton = document.createElement("BUTTON");
+boton.innerHTML = "Click me!"
+
+let carta = document.querySelector(".carta");
+    carta.appendChild(palo2);
+    carta.appendChild(numero);
+    carta.appendChild(palo);
+    carta.appendChild(boton)
+    carta.appendChild(input1)
+    carta.appendChild(input2)
+
+
+boton.addEventListener("click", ()=> {
+    location.reload();
+
+});
+
+setInterval("location.reload()",10000);
 
 }
+
+
